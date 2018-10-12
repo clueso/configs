@@ -15,11 +15,11 @@ bind - split-window -v
 unbind '"'
 unbind %
 
-bind -n M-h select-pane -L
-bind -n M-l select-pane -R
-bind -n M-j select-pane -D
-bind -n M-k select-pane -U
-bind -n F2 resize-pane -D 10
-#bind -n M-k select-pane -U
-#bind -n M-k select-pane -U
-#bind -n M-k select-pane -U
+bind h select-pane -L
+bind l select-pane -R
+bind j select-pane -D
+bind k select-pane -U
+bind -r M-h resize-pane -L 10
+bind -r M-l resize-pane -R 10
+bind -r M-j resize-pane -D 10
+bind -r M-k resize-pane -U 10
