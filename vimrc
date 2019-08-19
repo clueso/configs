@@ -5,8 +5,10 @@ syntax on
 set t_Co=256
 
 set cc=80
+set splitright
 set list
-set listchars=tab:»\ ,trail:●,extends:#,nbsp:.
+set listchars=tab:»\ ,trail:•,extends:#,nbsp:. 
+let g:netrw_liststyle = 1
 
 colo desert
 
