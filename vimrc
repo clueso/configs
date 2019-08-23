@@ -1,4 +1,6 @@
 set hlsearch
+set statusline=%f%m%r%h%w\ \ \ [buffer:%n]
+set smartcase
 set nu
 set mouse=a
 syntax on
@@ -12,14 +14,22 @@ let g:netrw_liststyle = 1
 
 colo desert
 
-noremap <silent> <F2> : :30winc > <Enter>
-noremap <silent> <F3> : :30winc < <Enter>
-noremap <silent> <F4> : :10winc + <Enter>
-noremap <silent> <F5> : :10winc - <Enter>
-noremap <C-h> :wincmd h<CR>
-noremap <C-j> :wincmd j<CR>
-noremap <C-k> :wincmd k<CR>
-noremap <C-l> :wincmd l<CR>
+nmap <silent> <F2> :30winc > <CR>
+nmap <silent> <F3> :30winc < <CR>
+nmap <silent> <F4> :res +10 <CR>
+nmap <silent> <F5> :res -10 <CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-l> :wincmd l<CR>
+nmap <silent> <c-t> :tabnew<CR>
+nmap <silent> <c-t> l :tabn<CR>
+nmap <silent> <c-t> h :tabp<CR>
+nmap <c-g>r :grep -R
+nmap :dt :diffthis
+nmap :do :diffoff
+nmap :we :windo e
+nnoremap <expr> <C-n> &diff ? ':qa<CR>' : '<C-n>'
 
 hi PreProc ctermfg=81 term=bold
 colo zenburn
