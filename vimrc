@@ -25,7 +25,7 @@ nmap <silent> <c-l> :wincmd l<CR>
 nmap <silent> <c-t> :tabnew<CR>
 nmap <silent> <c-t> l :tabn<CR>
 nmap <silent> <c-t> h :tabp<CR>
-nmap <c-g>r :grep -R
+nmap <c-g>r "zyiw<Esc>:grep -R <C-r>z 
 nmap :dt :diffthis
 nmap :do :diffoff
 nmap :we :windo e
