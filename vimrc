@@ -1,18 +1,20 @@
-set hlsearch
-set statusline=%f%m%r%h%w\ \ \ [buffer:%n]
-set smartcase
-set nu
-set mouse=a
-syntax on
-set t_Co=256
-
-set cc=80
-set splitright
-set list
-set listchars=tab:»\ ,trail:•,extends:#,nbsp:. 
+set nocompatible
 let g:netrw_liststyle = 1
 
-colo desert
+set t_Co=256
+set statusline=%f%m%r%h%w\ \ \ [buffer:%n]
+set mouse=a
+set smartcase
+set nu
+set hlsearch
+set list
+set listchars=tab:»\ ,trail:•,extends:#,nbsp:. 
+set cc=80
+set splitright
+set fillchars+=vert:│
+hi ColorColumn ctermbg=DarkGray guibg=DarkGrey
+colo zenburn
+
 
 nmap <silent> <F2> :30winc > <CR>
 nmap <silent> <F3> :30winc < <CR>
@@ -30,6 +32,3 @@ nmap :dt :diffthis
 nmap :do :diffoff
 nmap :we :windo e
 nnoremap <expr> <C-n> &diff ? ':qa<CR>' : '<C-n>'
-
-hi PreProc ctermfg=81 term=bold
-colo zenburn
