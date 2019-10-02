@@ -1,6 +1,7 @@
 alias gc='find $PWD -name "*.[c|h]" | cscope -bkqvR -i -'
+alias gcpp='find $PWD -name "*.[cpp|cc|h|hpp]" | cscope -bkqvR -i -'
 alias gs='git status'
 alias tmux='TERM=xterm-256color tmux'
 alias gsta='git stash'
 alias gstap='git stash pop'
-
+alias git-new-workdir='/usr/share/doc/git/contrib/workdir/git-new-workdir'
