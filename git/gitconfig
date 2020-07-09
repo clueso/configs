@@ -1,0 +1,15 @@
+[http]
+	sslverify = true
+[core]
+	editor = vim
+	trustctime = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+	trustExitCode = true
+[alias]
+[alias]
+	dt = difftool
+[mergetool]
+	trustExitCode = true
