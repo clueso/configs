@@ -41,6 +41,7 @@ set splitright
 set fillchars+=vert:│
 hi ColorColumn ctermbg=DarkGray guibg=DarkGrey
 colo zenburn
+syntax on
 
 
 nmap <silent> <F2> :30winc > <CR>
