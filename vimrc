@@ -1,9 +1,36 @@
 set nocompatible
+filetype on
+filetype off
+filetype plugin indent on
+filetype plugin on
+
+"source ~/.vim/plugin/cscope_maps.vim
+
+if has("cscope")
+    let curdir = getcwd()
+
+    while getcwd() != "/"
+        if filereadable("cscope.out")
+            cs add cscope.out
+            "set cscopetag "this one doesn't use quickfix...
+            "set cscopeverbose
+            "set csto=1
+            "set cscopequickfix=s-,c-,d-,i-,t-,e-
+            "nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>:cw<cr>
+            break
+        endif
+
+        cd ..
+    endwhile
+    execute "cd " . curdir
+endif
 let g:netrw_liststyle = 1
 
 set t_Co=256
 set statusline=%f%m%r%h%w\ \ \ [buffer:%n]
 set mouse=a
+set mousehide
+set nohlsearch
 set smartcase
 set nu
 set hlsearch
