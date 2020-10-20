@@ -1,8 +1,6 @@
 set nocompatible
-filetype on
 filetype off
 filetype plugin indent on
-filetype plugin on
 
 "source ~/.vim/plugin/cscope_maps.vim
 
@@ -28,8 +26,10 @@ let g:netrw_liststyle = 1
 
 set t_Co=256
 set statusline=%f%m%r%h%w\ \ \ [buffer:%n]
-set mouse=a
-set mousehide
+if has('mouse')
+    set mouse=a
+    set mousehide
+endif
 set nohlsearch
 set smartcase
 set nu
