@@ -7,11 +7,16 @@ filetype plugin indent on
 if has("cscope")
     let curdir = getcwd()
 
+    " This is a better way of adding the cscope DB because it searches the
+    " current as well as parent dirs. The one via the plugins folder only
+    " searches the current dir.
     while getcwd() != "/"
         if filereadable("cscope.out")
+            " Suppress 'dupliate DB' error
+            set nocscopeverbose
             cs add cscope.out
+            set cscopeverbose
             "set cscopetag "this one doesn't use quickfix...
-            "set cscopeverbose
             "set csto=1
             "set cscopequickfix=s-,c-,d-,i-,t-,e-
             "nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>:cw<cr>
