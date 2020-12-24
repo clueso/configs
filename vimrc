@@ -44,6 +44,9 @@ set listchars=tab:»\ ,trail:•,extends:#,nbsp:.
 set cc=80
 set splitright
 set fillchars+=vert:│
+
+" Uncomment to make the tab key indent by 4 spaces.
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 hi ColorColumn ctermbg=DarkGray guibg=DarkGrey
 colo zenburn
 syntax on

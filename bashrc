@@ -100,8 +100,8 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Definitions specific to work.
-if [ -f ~/.ftnt_bashrc ]; then
-    . ~/.ftnt_bashrc
+if [ -f ~/.prcv_bashrc ]; then
+    . ~/.prcv_bashrc
 fi
 
 # enable programmable completion features (you don't need to enable
