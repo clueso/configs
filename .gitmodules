@@ -1,0 +1,3 @@
+[submodule "vim/Zenburn"]
+	path = vim/Zenburn
+	url = https://github.com/jnurmine/Zenburn.git
